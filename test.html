@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Git Workflow</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f8fafc;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      color: #0f172a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 14px;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    td {
+      padding: 16px;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .stage {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .code {
+      background: #f1f5f9;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+      display: inline-block;
+      margin: 4px 0;
+      font-size: 13px;
+    }
+
+    .ui-text {
+      margin-bottom: 8px;
+    }
+
+    .ui-img {
+      margin-top: 8px;
+    }
+
+    .ui-img img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Git Workflow (3 Rows × 3 Columns)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Git Stage</th>
+        <th>Git Commands (Terminal)</th>
+        <th>VS Code Git UI</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Staging -->
+      <tr>
+        <td class="stage">Staging</td>
+        <td>
+          <div class="code">git status</div><br />
+          <div class="code">git add fileName</div><br />
+          <div class="code">git add .</div>
+        </td>
+        <td>
+          <div class="ui-text">
+            <strong>Source Control (Ctrl + Shift + G)</strong><br />
+            ➕ Click <strong>+</strong> next to files<br />
+            or <strong>Stage All Changes</strong>
+          </div>
+          <div class="ui-img">
+            <img src="staging-ui.png" alt="VS Code Staging UI" />
+          </div>
+        </td>
+      </tr>
+
+      <!-- Committing -->
+      <tr>
+        <td class="stage">Committing</td>
+        <td>
+          <div class="code">git commit -m "your message"</div>
+        </td>
+        <td>
+          <div class="ui-text">
+            Type commit message in <strong>message box</strong><br />
+            Click <strong>✓ Commit</strong>
+          </div>
+          <div class="ui-img">
+            <img src="commit-ui.png" alt="VS Code Commit UI" />
+          </div>
+        </td>
+      </tr>
+
+      <!-- Syncing -->
+      <tr>
+        <td class="stage">Syncing (Push / Pull)</td>
+        <td>
+          <div class="code">git pull</div><br />
+          <div class="code">git push</div>
+        </td>
+        <td>
+          <div class="ui-text">
+            Click <strong>Sync Changes 🔄</strong><br />
+            or <strong>Push / Pull</strong> from status bar
+          </div>
+          <div class="ui-img">
+            <img src="sync-ui.png" alt="VS Code Sync UI" />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
